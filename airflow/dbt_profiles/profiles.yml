@@ -1,0 +1,12 @@
+shipping_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST', 'shipping-postgres') }}"
+      port: 5432
+      user: "{{ env_var('DBT_USER', 'shipping_user') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      dbname: "{{ env_var('DBT_DBNAME', 'shipping_db') }}"
+      schema: analytics
+      threads: 4

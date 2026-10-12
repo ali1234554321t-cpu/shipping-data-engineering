@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: mart_port_capacity
+    description: "Analytics-ready monthly and annual port capacity indicators."
+    columns:
+      - name: indicator
+        data_tests:
+          - not_null
+      - name: summary_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["monthly", "annual"]
+      - name: record_count
+        data_tests:
+          - not_null
+
+  - name: mart_shipment_summary
+    description: "Analytics-ready shipment summaries by status and location."
+    columns:
+      - name: summary_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["status", "location_status"]
+      - name: status
+        data_tests:
+          - not_null
+      - name: shipment_count
+        data_tests:
+          - not_null

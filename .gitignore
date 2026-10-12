@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+
+# Logs and runtime files
+logs/
+*.log
+airflow/logs/
+airflow/airflow.cfg
+airflow/webserver_config.py
+
+# Local databases and generated files
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+Thumbs.db
+
+# Temporary and backup files
+*.bak
+*.tmp
+*.swp
+
+# Build artifacts
+build/
+dist/
+target/
+
+# dbt generated artifacts
+shipping_analytics/target/
+shipping_analytics/logs/
+shipping_analytics/dbt_packages/
+
+# Generated data - review before publishing
+data/raw/
+.dbt-venv/
